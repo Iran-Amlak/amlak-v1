@@ -1,0 +1,90 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block content %}
+
+  <div class="container" >
+    <div class="page-banner home-banner" style="background-color: rgba(226,226,218,255);">
+      <div class="row align-items-center flex-wrap-reverse h-100" style="direction:rtl">
+        <div class="col-md-6 py-5 wow fadeInLeft">
+          <h1 class="mb-4" style="font-family:yekan;text-align: center;">ایران املاک</h1>
+          <p class="text-lg text-grey mb-5" style="font-family:vazir;text-align: center;">
+             مشاوره ی نوین در خرید ، فروش ، طراحی ، اجرا و سرمایه گذاری در املاک و صنعت ساختمان
+          </p>
+          <a href="{% url 'register' %}" class="btn btn-primary" style="font-family:yekan">شروع کن</a>
+        </div>
+        <div class="col-md-6 py-5 wow zoomIn">
+          <div class="img-fluid text-center">
+            <img src="https://s6.uupload.ir/files/img_20221108_162350_823_pvq0.jpg" alt="" style="width:450px;height:450px">
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="btn-scroll" data-role="smoothscroll"><span class="mai-arrow-down"></span></a>
+    </div>
+  </div>
+
+  <div class="page-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="card-service wow fadeInUp">
+            <div class="header">
+              <img src="{% static 'img/services/service-1.svg' %}" alt="">
+            </div>
+            <div class="body">
+              <h5 class="text-secondary" style="font-family: yekan;">سرمایه گذاری در املاک و صنعت ساختمان</h5>
+              <p  style="font-family: vazir;">سرمایه گذاری : کوتاه مدت ، میان مدت و بلند مدت</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card-service wow fadeInUp">
+            <div class="header">
+              <img src="{% static 'img/services/service-2.svg' %}" alt="">
+            </div>
+            <div class="body">
+              <h5 class="text-secondary"  style="font-family: yekan;">طراحی و اجرا</h5>
+              <p  style="font-family: vazir;"> نقشه کشی و طراحی ساختمان ، فضای سبز : اتوکد و سه بعدی . ساخت و بازسازی : پیمانکاری و مدیریت پیمانی</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card-service wow fadeInUp">
+            <div class="header">
+              <img src="{% static 'img/services/service-3.svg' %}" alt="">
+            </div>
+            <div class="body">
+              <h5 class="text-secondary"  style="font-family: yekan;">خرید و فروش</h5>
+              <p  style="font-family: vazir;">خرید فروش تهاتر اجاره مشارکت در ساخت</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- .container -->
+  </div> <!-- .page-section -->
+
+  <div class="page-section" id="about">
+    <div class="container">
+      <div class="row align-items-center" style="direction:rtl">
+        <div class="col-lg-6 py-3 wow fadeInUp">
+          <h2 class="title-section" style="font-family: yekan;text-align: right;">گروه مشاورین ایران املاک</h2>
+          <div class="divider"></div>
+
+          <p style="text-align: right;font-family: vazir;">
+           مشاورین ایران املاک با تکیه بر سابقه ی طولانی در امر خرید ، فروش  ، طراحی ، مدیریت و نظارت در ساخت و کلیه ی امور صنعت ساختمان با هدف سهولت در تصمیم گیری های شما در امور ملکی و تبدیل سرمایه های خرد و کلان راکد شما به سرمایه گذاری پویا و پر بازده آماده ی ارائه ی هرگونه مشاوره ی نوین و تخصصی در صنعت ساختمانی می باشد.
+            
+          </p>
+     
+          <a href="{% url 'register' %}" class="btn btn-primary mt-3" style="font-family: yekan;">شروع کن</a>
+        </div>
+        <div class="col-lg-6 py-3 wow fadeInRight">
+          <div class="img-fluid py-3 text-center">
+            <img style="height:500px; border-radius:15px" src="https://s6.uupload.ir/files/m_rck0.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div> <!-- .container -->
+  </div> <!-- .page-section -->
+
+
+
+{% endblock %}

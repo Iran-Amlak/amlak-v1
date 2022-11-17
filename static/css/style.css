@@ -1,0 +1,55 @@
+
+
+@font-face{
+    font-family:'vazir';
+    src: url('../fonts/vazir/Vazir.eot') format('eot'),
+         url('../fonts/vazir/Vazir.ttf') format('truetype'),
+         url('../fonts/vazir/Vazir.woff') format('woff2');
+  
+  }
+  
+  @font-face{
+    font-family:'yekan';
+    src: url('../fonts/yekan/yekan.eot') format('eot'),
+         url('../fonts/yekan/yekan.woff2') format('woff2'),
+         url('../fonts/yekan/yekan.woff') format('woff');
+  } 
+  
+
+/* CSS */
+.button-24 {
+     background: #6C55F9;
+     border: 1px solid #6C55F9;
+     border-radius: 6px;
+     box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+     box-sizing: border-box;
+     color: #FFFFFF;
+     cursor: pointer;
+     display: inline-block;
+     font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+     font-size: 16px;
+     font-weight: 800;
+     line-height: 16px;
+     min-height: 40px;
+     outline: 0;
+     padding: 12px 14px;
+     text-align: center;
+     text-rendering: geometricprecision;
+     text-transform: none;
+     user-select: none;
+     -webkit-user-select: none;
+     touch-action: manipulation;
+     vertical-align: middle;
+   }
+   
+   .button-24:hover,
+   .button-24:active {
+     background-color: #FFFFFF;
+     background-position: 0 0;
+     color: #6C55F9;
+   
+   }
+   
+   .button-24:active {
+     opacity: .5;
+   }

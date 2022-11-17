@@ -1,0 +1,124 @@
+{% extends "base/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="d-flex justify-content-center h-100" style="direction: rtl;">
+  <div class="search">
+    <form class="search-model-form" method ="POST" style="direction: rtl;" value="ali"> 
+      {% csrf_token %}
+      <input name="action" type="text" class="search-input" placeholder="...." style="background-color: rgb(243, 239, 239);font-family: vazir;border-radius: 10px;">
+      <button class="btn btn-primary" style="font-family: yekan;">جست و جو</button>
+    </form>
+  </div>
+</div>
+
+
+<section style="background-color: #eee;">
+  <div class="container py-5">
+    {% for apartment in apartment_all %}
+    <div class="row justify-content-center mb-3" style="direction: rtl;">
+      <div class="col-md-12 col-xl-10">
+        <div class="card shadow-0 border rounded-3">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
+                <div class="bg-image hover-zoom ripple rounded ripple-surface">
+                  <img src="{{apartment.image_1.url}}"
+                    class="w-100" />
+                  <a href="#!">
+                    <div class="hover-overlay">
+                      <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-6 col-xl-6">
+                <h5 style="text-align: right;">{{apartment.title}}</h5>
+                <p style="text-align: right;" class="text-truncate mb-4 mb-md-0">
+                  {{apartment.description}}
+                </p>
+              </div>
+              <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
+                <div class="d-flex flex-column mt-4">
+                  <a href="{% url 'villa-detail' apartment.id %}">
+                    <button class="btn btn-primary btn-sm" type="button" style="font-size: 20px;font-family: yekan;">جزئیات</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+</section>
+
+<style>
+  @media (max-width: 767.98px) { .border-sm-start-none { border-left: none !important; } }
+
+
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:weight@100;200;300;400;500;600;700;800&display=swap");
+
+
+.search{
+    margin-bottom: auto;
+ 
+    height: 70px;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.search-input{
+
+    color: white;
+    border:0;
+    outline: 0;
+    background: none;
+    width: 0;
+    margin-top:5px;
+    caret-color:transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+
+}
+
+.search .search-input{
+    padding: 0 10px;
+    width: 550px;
+    caret-color: #536bf6;
+    font-size: 21px;
+    font-weight: 300;
+    color: black;
+    transition: width 0.4s linear;
+}
+
+.search:hover>.search-icon{
+    background:#1A237E;
+    color:#fff;
+}
+.search-icon{
+
+        height: 50px;
+    width: 50px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #536bf6;
+
+}
+a:link{
+    text-decoration: none;
+}
+
+
+</style>
+
+
+{% endblock %}

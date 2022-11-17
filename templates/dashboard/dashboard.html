@@ -1,0 +1,284 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block content %}
+
+
+<div class="page-section">
+    <div class="container">
+      {% if request.user.is_staff %}
+
+      <h3 style="text-align:right;font-family:yekan">آپارتمان  و خانه</h3>
+      <hr>
+      <div class="row" style="direction:rtl">
+        {% if request.user.is_superuser %}
+        <div class="col-lg-3">
+          <div class="card-service">
+            <div class="header">
+              <img src="{% static 'img/services/service-1.svg' %}" alt="">
+            </div>
+            <a href="{% url 'apartment-all' %}">
+            <div class="body">
+              <h5 class="text-secondary" style="font-family:yekan">فروشندگان آپارتمان</h5>
+            </div>
+            </a>
+          </div>
+        </div>
+        {% endif %}
+
+        <div class="col-lg-3">
+          <div class="card-service">
+            <div class="header">
+              <img src="{% static 'img/services/service-3.svg' %}" alt="">
+            </div>
+            <a href="{% url 'apartment-add' %}">
+              <div class="body">
+                <h5 class="text-secondary" style="font-family:yekan">اضافه کردن فروشنده</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        {% if request.user.is_superuser %}
+
+        <div class="col-lg-3">
+          <div class="card-service">
+            <div class="header">
+              <img src="{% static 'img/services/service-1.svg' %}" alt="">
+            </div>
+            <a href="{% url 'khane-all' %}">
+            <div class="body">
+              <h5 class="text-secondary" style="font-family:yekan">فروشندگان خانه</h5>
+            </div>
+            </a>
+          </div>
+        </div>
+
+        {% endif %}
+
+        <div class="col-lg-3">
+          <div class="card-service">
+            <div class="header">
+              <img src="{% static 'img/services/service-3.svg' %}" alt="">
+            </div>
+            <a href="{% url 'khane-add' %}">
+              <div class="body">
+                <h5 class="text-secondary" style="font-family:yekan">اضافه کردن فروشنده خانه</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+      {% endif %}
+
+      {% if request.user.is_staff %}
+      <h3 style="text-align:right;font-family:yekan">ویلا و زمین</h3>
+      <hr>
+
+      <div class="row" style="direction:rtl">
+        {% if request.user.is_superuser %}
+
+        <div class="col-lg-3">
+          <div class="card-service">
+            <div class="header">
+              <img src="{% static 'img/services/service-1.svg' %}" alt="">
+            </div>
+            <a href="{% url 'villa-all' %}">
+              <div class="body">
+                <h5 class="text-secondary" style="font-family:yekan">فروشندگان ویلا</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+        {% endif %}
+
+        <div class="col-lg-3">
+          <div class="card-service">
+            <div class="header">
+              <img src="{% static 'img/services/service-3.svg' %}" alt="">
+            </div>
+            <a href="{% url 'villa-add' %}">
+              <div class="body">
+                <h5 class="text-secondary" style="font-family:yekan">اضافه کردن فروشنده ویلا</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        {% if request.user.is_superuser %}
+
+        <div class="col-lg-3">
+          <div class="card-service">
+            <div class="header">
+              <img src="{% static 'img/services/service-1.svg' %}" alt="">
+            </div>
+            <a href="{% url 'zamin-all' %}">
+            <div class="body">
+              <h5 class="text-secondary" style="font-family:yekan">فروشندگان زمین</h5>
+            </div>
+            </a>
+          </div>
+        </div>
+
+        {% endif %}
+
+        <div class="col-lg-3">
+          <div class="card-service">
+            <div class="header">
+              <img src="{% static 'img/services/service-3.svg' %}" alt="">
+            </div>
+            <a href="{% url 'zamin-add' %}">
+              <div class="body">
+                <h5 class="text-secondary" style="font-family:yekan">اضافه کردن فروشنده زمین</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+      <h3 style="text-align:right;font-family:yekan">مستغلات و باغ</h3>
+      <hr>
+
+      <div class="row" style="direction:rtl">
+
+        {% if request.user.is_superuser %}
+
+        <div class="col-lg-3">
+          <div class="card-service">
+            <div class="header">
+              <img src="{% static 'img/services/service-1.svg' %}" alt="">
+            </div>
+            <a href="{% url 'mostaghelat-all' %}">
+            <div class="body">
+              <h5 class="text-secondary" style="font-family:yekan">فروشندگان مستغلات</h5>
+            </div>
+            </a>
+          </div>
+        </div>
+        {% endif %}
+
+        <div class="col-lg-3">
+          <div class="card-service">
+            <div class="header">
+              <img src="{% static 'img/services/service-3.svg' %}" alt="">
+            </div>
+            <a href="{% url 'mostaghelat-add' %}">
+              <div class="body">
+                <h5 class="text-secondary" style="font-family:yekan">اضافه کردن فروشنده مستغلات</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        {% if request.user.is_superuser %}
+
+        <div class="col-lg-3">
+          <div class="card-service">
+            <div class="header">
+              <img src="{% static 'img/services/service-1.svg' %}" alt="">
+            </div>
+            <a href="{% url 'bagh-all' %}">
+            <div class="body">
+              <h5 class="text-secondary" style="font-family:yekan">فروشندگان باغ</h5>
+            </div>
+            </a>
+          </div>
+        </div>
+        {% endif %}
+
+        <div class="col-lg-3">
+          <div class="card-service">
+            <div class="header">
+              <img src="{% static 'img/services/service-3.svg' %}" alt="">
+            </div>
+            <a href="{% url 'bagh-add' %}">
+              <div class="body">
+                <h5 class="text-secondary" style="font-family:yekan">اضافه کردن فروشنده باغ</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+    
+      </div>
+      {% endif %}
+
+      {% if request.user.is_staff %}
+
+      <h3 style="text-align:right;font-family:yekan">مغازه</h3>
+      <hr>
+
+      <div class="row" style="direction:rtl">
+
+        {% if request.user.is_superuser %}
+
+        <div class="col-lg-3">
+          <div class="card-service">
+            <div class="header">
+              <img src="{% static 'img/services/service-1.svg' %}" alt="">
+            </div>
+            <a href="{% url 'maqaze-all' %}">
+            <div class="body">
+              <h5 class="text-secondary" style="font-family:yekan">فروشندگان مغازه</h5>
+            </div>
+            </a>
+          </div>
+        </div>
+        {% endif %}
+
+        <div class="col-lg-3">
+          <div class="card-service">
+            <div class="header">
+              <img src="{% static 'img/services/service-3.svg' %}" alt="">
+            </div>
+            <a href="{% url 'maqaze-add' %}">
+              <div class="body">
+                <h5 class="text-secondary" style="font-family:yekan">اضافه کردن فروشنده مغازه</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+
+      <h3 style="text-align:right;font-family:yekan">آرشیو مشتریان و خریداران</h3>
+      <hr>
+
+      <div class="row" style="direction:rtl">
+
+        {% if request.user.is_superuser %}
+
+        <div class="col-lg-3">
+          <div class="card-service">
+            <div class="header">
+              <img src="{% static 'img/services/service-1.svg' %}" alt="">
+            </div>
+            <a href="{% url 'archive-all' %}">
+            <div class="body">
+              <h5 class="text-secondary" style="font-family:yekan"> لیست خریداران</h5>
+            </div>
+            </a>
+          </div>
+        </div>
+        {% endif %}
+
+        <div class="col-lg-3">
+          <div class="card-service">
+            <div class="header">
+              <img src="{% static 'img/services/service-3.svg' %}" alt="">
+            </div>
+            <a href="{% url 'archive-add' %}">
+              <div class="body">
+                <h5 class="text-secondary" style="font-family:yekan">صفحه ی ثبت سفارش  توسط خریدار و فروشنده</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div> <!-- .container -->
+  </div> <!-- .page-section -->
+
+{% endblock %}

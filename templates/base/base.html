@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta name="copyright" content="MACode ID, https://macodeid.com/">
+
+  <title>Iran Amlak</title>
+
+  <link rel="stylesheet" href="{% static 'css/maicons.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+  <link rel="stylesheet" href="{% static 'vendor/animate/animate.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/theme.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' rel='stylesheet'>
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+  <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
+                         </head>
+  <body oncontextmenu='return false' class='snippet-body'>
+  <link rel='stylesheet' href='https://sachinchoolur.github.io/lightslider/dist/css/lightslider.css'>
+  
+
+</head>
+<body>
+
+  <!-- Back to top button -->
+  <div class="back-to-top"></div>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky" data-offset="500">
+      <div class="container">
+        <a href="{% url 'home' %}" class="navbar-brand" style="font-family: yekan;">ایران <span class="text-primary">املاک</span></a>
+
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="navbarContent">
+          <ul class="navbar-nav ml-auto">
+    
+            {% if login %}
+            <li class="nav-item" style="text-align: right;">
+              <a class="btn btn-primary ml-lg-2" href="{% url 'dashboard' %}" style="font-family: yekan;">داشبورد</a>
+            </li>
+            {% else %}
+            <li class="nav-item" style="text-align: right;">
+              <a class="btn btn-primary ml-lg-2" href="{% url 'register' %}" style="font-family: yekan;">ورود/ثبت نام</a>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+
+  </header>
+
+{% block content %}
+
+{% endblock %}
+
+
+  <footer class="page-footer bg-image" style="background-image: url(../assets/img/world_pattern.svg);">
+    <div class="container">
+      <div class="row mb-5" style="direction: rtl;text-align: right;">
+        <div class="col-lg-4 py-3">
+          <h3 style="font-family: yekan;">ایران املاک</h3>
+          <p style="font-family: vazir;">
+            مشاوره ی نوین در خرید ، فروش ، طراحی ، اجرا و سرمایه گذاری در املاک و صنعت ساختمان 
+              </p>
+        </div>
+        <div class="col-lg-4 py-3">
+          <h5 style="font-family: yekan;">لینک های مفید</h5>
+          <ul class="footer-menu">
+            <li>
+              <a href="https://instagram.com/iran_amlak.Z.01">
+                <img style="width: 20px;height:20px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" alt="">
+                اینستاگرام ایران املاک 
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-4 py-3">
+          <h5 style="font-family: yekan;">ارتباط با ما</h5>
+          <p style="font-family:yekan">قزوین ، آبیک ، زیاران</p>
+          <a href="#" class="footer-link" style="direction: ltr">0912 73 71 509 | فلاح</a>
+          <br>
+          <a href="#" class="footer-link" style="direction: ltr">0912 58 11 511 | برافروخته</a>
+          <br>
+          <a href="#" class="footer-link" style="direction: ltr">028 3283 4511 | دفتر ایران املاک</a>
+          <br>
+        </div>
+      </div>
+
+      <p class="text-center" id="copyright">Copyright &copy; 2022. This template design and develop by me</p>
+    </div>
+  </footer>
+
+<script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
+
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+<script src="{% static 'js/google-maps.js' %}"></script>
+
+<script src="{% static 'vendor/wow/wow.min.js' %}"></script>
+
+<script src="{% static 'js/theme.js' %}"></script>
+  
+</body>
+</html>
