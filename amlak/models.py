@@ -207,7 +207,7 @@ melk_status = (
     ('باغ', 'باغ'),
     ('ویلا', 'ویلا'),
     ('آپارتمان', 'آپارتمان'),
-    ('مستقلات', 'مستقلات'),
+    ('مستغلات', 'مستغلات'),
     ('خانه', 'خانه'),
     ('مغازه', 'مغازه'),
 )
@@ -242,7 +242,7 @@ class Khane(models.Model):
     floor_count = models.CharField(max_length=100, blank=True, null=True, verbose_name="تعدا طبقات") 
     nama_building = models.CharField(max_length=100, blank=True, null=True, verbose_name="نمای ساختمان") 
     description = models.TextField(null=True, verbose_name="توضیحات")   
-    image_1 = models.ImageField(null=True, upload_to="khane", verbose_name="تصویر") 
+    image_1 = models.ImageField(blank=True, null=True, upload_to="khane", verbose_name="تصویر") 
     image_2 = models.ImageField(blank=True, null=True, upload_to="khane", verbose_name="تصویر") 
     image_3 = models.ImageField(blank=True, null=True, upload_to="khane", verbose_name="تصویر") 
     image_4 = models.ImageField(blank=True, null=True, upload_to="khane", verbose_name="تصویر") 
@@ -301,7 +301,7 @@ class Mostaghelat(models.Model) :
     floor_count = models.CharField(max_length=100, blank=True, null=True, verbose_name="تعدا طبقات") 
     nama_building = models.CharField(max_length=100, blank=True, null=True, verbose_name="نمای ساختمان") 
     description = models.TextField(null=True, verbose_name="توضیحات")  
-    image_1 = models.ImageField(null=True, upload_to="khane", verbose_name="تصویر") 
+    image_1 = models.ImageField(blank=True, null=True, upload_to="khane", verbose_name="تصویر") 
     image_2 = models.ImageField(blank=True, null=True, upload_to="khane", verbose_name="تصویر") 
     image_3 = models.ImageField(blank=True, null=True, upload_to="khane", verbose_name="تصویر") 
     image_4 = models.ImageField(blank=True, null=True, upload_to="khane", verbose_name="تصویر") 
@@ -367,7 +367,7 @@ class Apartment(models.Model) :
     vahed = models.CharField(max_length=100, blank=True, null=True, verbose_name="واحد") 
     nama_building = models.CharField(max_length=100, blank=True, null=True, verbose_name="نمای ساختمان") 
     description = models.TextField(null=True, verbose_name="توضیحات")    
-    image_1 = models.ImageField(null=True, upload_to="khane", verbose_name="تصویر") 
+    image_1 = models.ImageField(blank=True, null=True, upload_to="khane", verbose_name="تصویر") 
     image_2 = models.ImageField(blank=True, null=True, upload_to="khane", verbose_name="تصویر") 
     image_3 = models.ImageField(blank=True, null=True, upload_to="khane", verbose_name="تصویر") 
     image_4 = models.ImageField(blank=True, null=True, upload_to="khane", verbose_name="تصویر") 
@@ -427,7 +427,7 @@ class Villa(models.Model) :
     floor_count = models.CharField(max_length=100, blank=True, null=True, verbose_name="تعداد طبقات") 
     nama_building = models.CharField(max_length=100, blank=True, null=True, verbose_name="نمای ساختمان") 
     description = models.TextField(null=True, verbose_name="توضیحات")  
-    image_1 = models.ImageField(null=True, upload_to="khane", verbose_name="تصویر") 
+    image_1 = models.ImageField(blank=True, null=True, upload_to="khane", verbose_name="تصویر") 
     image_2 = models.ImageField(blank=True, null=True, upload_to="khane", verbose_name="تصویر") 
     image_3 = models.ImageField(blank=True, null=True, upload_to="khane", verbose_name="تصویر") 
     image_4 = models.ImageField(blank=True, null=True, upload_to="khane", verbose_name="تصویر") 
@@ -485,7 +485,7 @@ class Zamin(models.Model) :
     price = models.CharField(max_length=100, null=True, blank=True, verbose_name="قیمت") 
     title = models.CharField(max_length=100, null=True, verbose_name="عنوان") 
     description = models.TextField(null=True, verbose_name="توضیحات")    
-    image_1 = models.ImageField(null=True, upload_to="khane", verbose_name="تصویر") 
+    image_1 = models.ImageField(blank=True, null=True, upload_to="khane", verbose_name="تصویر") 
     image_2 = models.ImageField(blank=True, null=True, upload_to="khane", verbose_name="تصویر") 
     image_3 = models.ImageField(blank=True, null=True, upload_to="khane", verbose_name="تصویر") 
     image_4 = models.ImageField(blank=True, null=True, upload_to="khane", verbose_name="تصویر") 
@@ -530,7 +530,7 @@ class Maqaze(models.Model):
     title = models.CharField(max_length=100, null=True, verbose_name="عنوان") 
     address = models.TextField(null=True, verbose_name="آدرس")
     description = models.TextField(null=True, verbose_name="توضیحات")   
-    image_1 = models.ImageField(null=True, upload_to="khane", verbose_name="تصویر") 
+    image_1 = models.ImageField(blank=True, null=True, upload_to="khane", verbose_name="تصویر") 
     image_2 = models.ImageField(blank=True, null=True, upload_to="khane", verbose_name="تصویر") 
     image_3 = models.ImageField(blank=True, null=True, upload_to="khane", verbose_name="تصویر") 
     image_4 = models.ImageField(blank=True, null=True, upload_to="khane", verbose_name="تصویر") 
@@ -579,7 +579,7 @@ class Bagh(models.Model):
     title = models.CharField(max_length=100, null=True, verbose_name="عنوان") 
     address = models.TextField(null=True, verbose_name="آدرس")
     description = models.TextField(null=True, verbose_name="توضیحات") 
-    image_1 = models.ImageField(null=True, upload_to="khane", verbose_name="تصویر") 
+    image_1 = models.ImageField(blank=True, null=True, upload_to="khane", verbose_name="تصویر") 
     image_2 = models.ImageField(blank=True, null=True, upload_to="khane", verbose_name="تصویر") 
     image_3 = models.ImageField(blank=True, null=True, upload_to="khane", verbose_name="تصویر") 
     image_4 = models.ImageField(blank=True, null=True, upload_to="khane", verbose_name="تصویر") 

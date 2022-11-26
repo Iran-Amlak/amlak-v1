@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     # apps
     'amlak',
     'user_auth',
-    'multiforloop',
     # 3 party pakages
     'crispy_forms',
     'django_cleanup.apps.CleanupConfig',
